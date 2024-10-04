@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calculadora
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,41 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div id="numeros">
+    <ion-item>
+      <ion-input label="{{num}}" [readonly]="true"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="calculadora">
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-button expand="block" (click)="add('7')">7</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('8')">8</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('9')">9</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="clear()">C</ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-button expand="block" (click)="add('4')">4</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('5')">5</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('6')">6</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('/')">/</ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-button expand="block" (click)="add('1')">1</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('2')">2</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('3')">3</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('*')">*</ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-button expand="block" (click)="add('0')">0</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('.')">.</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('+')">+</ion-button></ion-col>
+        <ion-col><ion-button expand="block" (click)="add('-')">-</ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-button expand="block" (click)="calcular()">=</ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
